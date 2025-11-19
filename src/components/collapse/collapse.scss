@@ -1,0 +1,66 @@
+// Collapse.scss
+
+// Variables personnalisables
+$collapse-border: 1px solid #ddd;
+$collapse-radius: 8px;
+$collapse-bg-header: #f7f7f7;
+$collapse-bg-header-hover: #eee;
+$collapse-bg-content: white;
+$collapse-padding-header: 1rem 1.5rem;
+$collapse-padding-content: 1.5rem;
+$collapse-transition-duration: 0.4s;
+$collapse-transition-timing: ease-in-out;
+$collapse-max-height-open: 800px; // augmente si tu as du contenu très long
+
+.collapse {
+  border: $collapse-border;
+  border-radius: $collapse-radius;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background: white;
+
+  // Header (le bouton cliquable)
+  &-header {
+    width: 100%;
+    padding: $collapse-padding-header;
+    background: $collapse-bg-header;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s;
+
+    &:hover {
+      background: $collapse-bg-header-hover;
+    }
+  }
+
+  // Flèche
+  .arrow {
+    transition: transform 0.3s ease;
+
+    &.open {
+      transform: rotate(180deg);
+    }
+  }
+
+  // Conteneur du contenu (hauteur animée)
+  &-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height $collapse-transition-duration $collapse-transition-timing;
+
+    &.open {
+      max-height: $collapse-max-height-open; // assez grand pour la plupart des cas
+    }
+  }
+
+  // Padding intérieur du contenu ouvert
+  &-inner {
+    padding: $collapse-padding-content;
+    background: $collapse-bg-content;
+  }
+}
