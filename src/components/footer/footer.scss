@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 8rem;
+    width: 100%;
+    color: white; 
+}
+
+.logo {
+    width: 5rem;
+    color: white;
+    text-decoration-color: white;
+}
