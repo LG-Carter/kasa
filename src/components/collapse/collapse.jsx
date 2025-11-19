@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import cheveron from '../../assets/cheveron.png';
+import './collapse.scss';
 
 function Collapse({title, children}) {
 
