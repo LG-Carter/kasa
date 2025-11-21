@@ -8,7 +8,7 @@ import Collapse from '../../components/collapse/collapse.jsx'
 
 function About () {
     return (
-        <div>
+        <div className='about'>
             <Header />
             <Banner imageUrl={ bannerAbout} />
             <Collapse title='Fiabilité'>
