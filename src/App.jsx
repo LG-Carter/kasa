@@ -1,6 +1,8 @@
 import Home from './pages/home/home';
 import About from './pages/about/about';
 import Error from './pages/error/error';
+import Footer from './components/footer/footer.jsx';
+import './styles/main.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
           <Route path='/about' element={<About />}/>
           <Route path='*' element={<Error />}/>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   )};

@@ -30,7 +30,6 @@ function About () {
                    critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire,
                 </p>
             </Collapse>
-            <Footer />
         </div>
     )
 }

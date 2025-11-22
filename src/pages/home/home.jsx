@@ -11,7 +11,6 @@ function Home() {
             <Header />
             <Banner title='Chez vous, partout et ailleurs' imageUrl={BannerImg} />
             <Card />
-            <Footer />
         </div>
     )
   
