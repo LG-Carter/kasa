@@ -619,3 +619,5 @@ export const datas =
   }
 ]
 
+export default datas;
+

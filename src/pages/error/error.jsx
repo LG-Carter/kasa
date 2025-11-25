@@ -1,14 +1,16 @@
 import Header from '../../components/header/header.jsx'
+import './error.scss';
 
 
-function Error(){
-    return(
-        <div className="error-page">
-            <Header />
-            <h1>404 - Page Not Found</h1>
-            <p>Oups! La page que vous demandez n'existe pas.</p>
-        </div>
-    )
+export default function Error() {
+	return (
+		<div className='notFound'>
+			<Header />
+			<div className="notFound_infos">
+				<h1 className='notFound_infos_title'>404</h1>
+				<p className='notFound_infos_content'>Oups! La page que vous demandez n'existe pas.</p>
+			</div>
+		</div>
+	)
 }
 
-export default Error;

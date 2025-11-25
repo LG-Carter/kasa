@@ -1,32 +1,31 @@
-// src/App.js
 import React, { useState } from 'react';
 import './slider.scss';
 
-// Quelques images gratuites pour tester (remplace par les tiennes si tu veux)
-const slides = [
-  'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800',
-  'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800',
-  'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800',
-  'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800',
-];
-
-function Slider() {
+function Slider({ imageSlider = [] }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Aller à l'image suivante
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % slides.length);
+    setCurrentIndex((prev) => (prev + 1) % imageSlider.length);
   };
 
   // Revenir à l'image précédente
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
+    setCurrentIndex((prev) => (prev - 1 + imageSlider.length) % imageSlider.length);
   };
+
+  // Aller directement à une slide via les points
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
+  // Gérer le cas où il n'y a pas d'images
+  if (!imageSlider || imageSlider.length === 0) {
+    return <div className="slider-container">Aucune image disponible</div>;
+  }
 
   return (
     <div className="slider-container">
-      <h1>Mon Slider from Scratch 🚀</h1>
-
       <div className="slider">
         {/* Bouton Précédent */}
         <button className="nav-btn prev-btn" onClick={prevSlide}>
@@ -40,7 +39,7 @@ function Slider() {
 
         {/* Les images */}
         <div className="slides-wrapper">
-          {slides.map((slide, index) => (
+          {imageSlider.map((slide, index) => (
             <img
               key={index}
               src={slide}
@@ -53,9 +52,15 @@ function Slider() {
           ))}
         </div>
 
-        {/* Compteur de slides */}
-        <div className="counter">
-          {currentIndex + 1} / {slides.length}
+        {/* Les points en bas */}
+        <div className="dots">
+          {imageSlider.map((_, index) => (
+            <span
+              key={index}
+              className={`dot ${currentIndex === index ? 'active' : ''}`}
+              onClick={() => goToSlide(index)}
+            ></span>
+          ))}
         </div>
       </div>
     </div>
