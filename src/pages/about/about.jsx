@@ -1,9 +1,7 @@
 import Header from '../../components/header/header.jsx'
 import Banner from '../../components/banner/banner.jsx'
 import bannerAbout from '../../assets/bannerAbout.png'
-import Footer from '../../components/footer/footer.jsx'
 import Collapse from '../../components/collapse/collapse.jsx'
-
 
 
 function About () {
@@ -29,7 +27,7 @@ function About () {
                 <p>La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux 
                    critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire,
                 </p>
-            </Collapse>
+            </Collapse>            
         </div>
     )
 }
