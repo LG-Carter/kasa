@@ -4,7 +4,7 @@ import { datas } from '../../data/data'
 import Header from "../../components/header/header";
 import Slider from "../../components/slider/slider";
 import Collapse from "../../components/collapse/collapse";
-
+import Error from '../error/error.jsx';
 
 export default function Logement() {
 
@@ -12,7 +12,7 @@ export default function Logement() {
 	const dataLogement = datas.find(data => data.id === id);
 
 	if (!dataLogement) {
-		return <div>Logement non trouvé</div>;
+		return <div><Error /></div>;
 	}
 
 	const name = dataLogement.host.name.split(' ');
