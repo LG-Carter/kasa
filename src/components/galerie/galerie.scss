@@ -1,0 +1,19 @@
+@import '../../styles/main.scss';
+
+
+.galerie{
+    @include flexCenter;
+    flex-wrap: wrap;
+    background-color: $color-tertiary;
+    border-radius: 20px 20px 0 0;
+    padding: 40px 0;
+    gap: 40px;
+    
+    .logement-card{
+      width: 400px;
+      height: 400px;
+      border-radius: 12px;
+      overflow: hidden; // Pour éviter que l'image ne déborde
+    }
+  
+}

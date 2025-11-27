@@ -1,8 +1,21 @@
-import datas from '../../data/data.js';
 import { Link } from 'react-router-dom';
-import '../card/card.scss';
+import './card.scss';
 
   
+function Card({id, title, cover}) {
+    return (
+        <Link to={`/logement/${id}`} className='logement-card'>
+            <img src={cover} alt={title} className='logement-image'/>
+            <h3>{title}</h3>
+        </Link>
+    )    
+}
+  
+
+export default Card;
+
+
+/*
 function Card() {
     return (
         <div className='galerie'>
@@ -17,6 +30,5 @@ function Card() {
         </div>
     )
 }
-  
 
-export default Card;
+*/

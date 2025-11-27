@@ -1,8 +1,7 @@
 import Header from '../../components/header/header';
-import Footer from '../../components/footer/footer';
 import Banner from '../../components/banner/banner';
 import BannerImg from '../../assets/Banner_img.png';
-import Card from '../../components/card/card.jsx';
+import Galerie from '../../components/galerie/galerie';
 import './home.scss';
 
 function Home() {
@@ -10,7 +9,7 @@ function Home() {
         <div className='home'>
             <Header />
             <Banner title='Chez vous, partout et ailleurs' imageUrl={BannerImg} />
-            <Card />
+            <Galerie />
         </div>
     )
   

@@ -21,7 +21,7 @@ export default function Logement() {
 	const images = dataLogement.pictures || [];
 
 	return (
-		<div className='accomodation_wrapper'>
+		<div className='logement'>
 			<Header />
 			<Slider imageSlider={images} />
 			<main className="logement_main">
