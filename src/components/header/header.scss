@@ -1,18 +1,9 @@
-@import '../../styles/main.scss';
+@use '../../styles/main.scss';
 
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 90%;
-    margin: 0 auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    margin: 50px auto
 }
 
-/*
-.header__logo {
-    width: 150px;
-    height: auto;
-}
-*/

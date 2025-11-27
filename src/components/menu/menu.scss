@@ -1,14 +1,17 @@
 ul{
     list-style: none;
+    :hover {
+        text-decoration: underline;
+    }
 }
 
 ul li {
     display: inline-block;
-    margin-right: 3em;
+    margin-left: 4rem;
 }
 
 .lien_nav {
     text-decoration: none;
     color: #fc4939;
-    font-size: 1.3em;
+    font-size: 1.6em;
 }
