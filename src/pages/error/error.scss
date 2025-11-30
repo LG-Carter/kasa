@@ -6,8 +6,7 @@
     padding-bottom: 40px;
     color: $color-secondary;
     &_infos{
-        @include flexCenter;
-        min-height: calc(100vh - 250px);
+        @include flexBox(column, center, center);
         &_title{
             font-weight: 700;
             font-size: 288px;

@@ -2,7 +2,7 @@ import {useState} from 'react';
 import cheveron from '../../assets/cheveron.png';
 import './collapse.scss';
 
-function Collapse({title, children}) {
+function Collapse({title, children, content}) {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -18,7 +18,7 @@ function Collapse({title, children}) {
                 <img src={cheveron} alt="arrow" className= {!isOpen ? 'collapse_arrow collapse_arrow--open' : 'collapse_arrow'} />
             </div>
             {isOpen && <div className='collapse_content'>
-                {children}
+                {children || content}
             </div>}
         </div>
         

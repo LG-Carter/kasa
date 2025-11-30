@@ -6,10 +6,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     &_button {
-        width: 85%;
+        width: 100%;
         height: 45px;
         background-color: $color-secondary;
         border-radius: 5px;
@@ -22,8 +22,8 @@
         cursor: pointer;
     }
     &_content {
-        width: 85%;
-        padding: 4px 10px;
+        width: 100%;
+        padding: 0.8rem;
         border-radius: 0 0 5px 5px;
         background-color: $color-tertiary;
     }
@@ -36,4 +36,24 @@
             transform: rotate(180deg);
     }
     
+}
+
+.logement_collapse{
+    display: flex;
+    gap: 10rem;
+    &_item{
+        flex: 1;
+        
+        .collapse {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 650px){
+        flex-direction: column;
+        gap: 20px;
+        margin: 20px auto;
+        &_item{
+            width: 100%;
+        }    
+    }
 }
