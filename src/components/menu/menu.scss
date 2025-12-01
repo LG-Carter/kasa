@@ -3,15 +3,25 @@ ul{
     :hover {
         text-decoration: underline;
     }
+
+    li{
+        display: inline-block;
+        margin-left: 4rem;
+        @media screen and (max-width: 650px){
+                 margin-left: 1rem;
+                }
+
+        .lien_nav {
+            text-decoration: none;
+            color: #fc4939;
+            font-size: 1.3rem;
+
+            @media screen and (max-width: 650px){
+                 margin-left: 0;
+                 font-size: 1.3rem;
+                }
+        }   
+    }
 }
 
-ul li {
-    display: inline-block;
-    margin-left: 4rem;
-}
 
-.lien_nav {
-    text-decoration: none;
-    color: #fc4939;
-    font-size: 1.3rem;
-}

@@ -4,6 +4,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 50px auto
+    margin: 50px auto;
+    
+    img {
+        @media screen and (max-width: 650px){
+            height: 50px;
+            width: auto; // garde les proportions
+        }
+    }
 }
-

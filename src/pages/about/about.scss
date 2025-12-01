@@ -5,6 +5,10 @@
     margin-bottom: 4rem;
     &_container{
         padding: 0 8rem;
+        
+        @media screen and (max-width: 650px){
+            padding: 0;
+        }
     }
 
     &_collapse {
