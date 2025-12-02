@@ -1,8 +1,6 @@
 ul{
     list-style: none;
-    :hover {
-        text-decoration: underline;
-    }
+    
 
     li{
         display: inline-block;
@@ -15,6 +13,13 @@ ul{
             text-decoration: none;
             color: #fc4939;
             font-size: 1.3rem;
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &.active {
+                text-decoration: underline;
+            }
 
             @media screen and (max-width: 650px){
                  margin-left: 0;

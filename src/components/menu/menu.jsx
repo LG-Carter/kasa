@@ -1,12 +1,12 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './menu.scss'
 
 function Menu() {
     return (
         <nav>
             <ul>
-                <li><Link className='lien_nav' to='/home'>Acceuil</Link></li>
-                <li><Link className='lien_nav' to='/about'>A Propos</Link></li>
+                <li><NavLink className='lien_nav' to='/home'>Acceuil</NavLink></li>
+                <li><NavLink className='lien_nav' to='/about'>A Propos</NavLink></li>
             </ul>
         </nav>
     )

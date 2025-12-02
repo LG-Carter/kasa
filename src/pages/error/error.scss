@@ -1,8 +1,6 @@
 @import "../../styles/main.scss";
 
 .notFound{
-    max-width: 95%;
-    margin: 0 auto;
     padding-bottom: 40px;
     color: $color-secondary;
     &_infos{
@@ -23,7 +21,7 @@
             position: relative;
             display: block;
             width: fit-content;
-            margin: 0 auto;
+            margin: 10rem auto;
             font-weight: 500;
             font-size: clamp(12px, 2.5vw, 18px);
 

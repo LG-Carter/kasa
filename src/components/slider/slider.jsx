@@ -24,18 +24,25 @@ function Slider({ imageSlider = [] }) {
     return <div className="slider-container">Aucune image disponible</div>;
   }
 
+  // Nouveau : on cache les boutons et les points s'il n'y a qu'une seule image
+  const showNavigation = imageSlider.length > 1;
+
   return (
     <div className="slider-container">
       <div className="slider">
-        {/* Bouton Précédent */}
-        <button className="nav-btn prev-btn" onClick={prevSlide}>
-          ❮
-        </button>
+        {/* Bouton Précédent - visible seulement si plus d'une image */}
+        {showNavigation && (
+          <button className="nav-btn prev-btn" onClick={prevSlide}>
+            ❮
+          </button>
+        )}
 
-        {/* Bouton Suivant */}
-        <button className="nav-btn next-btn" onClick={nextSlide}>
-          ❯
-        </button>
+        {/* Bouton Suivant - visible seulement si plus d'une image */}
+        {showNavigation && (
+          <button className="nav-btn next-btn" onClick={nextSlide}>
+            ❯
+          </button>
+        )}
 
         {/* Les images */}
         <div className="slides-wrapper">
@@ -52,15 +59,22 @@ function Slider({ imageSlider = [] }) {
           ))}
         </div>
 
-        {/* Les points en bas */}
-        <div className="dots">
-          {imageSlider.map((_, index) => (
-            <span
-              key={index}
-              className={`dot ${currentIndex === index ? 'active' : ''}`}
-              onClick={() => goToSlide(index)}
-            ></span>
-          ))}
+        {/* Les points en bas + indicateur de position */}
+        <div className="counter">
+          {/* Indicateur 1/4, 2/4 etc. */}
+          <span className="slide-counter">
+            {currentIndex + 1} / {imageSlider.length}
+          </span>
+
+          {/* Points de navigation - visibles seulement si plus d'une image */}
+          {showNavigation &&
+            imageSlider.map((_, index) => (
+              <span
+                key={index}
+                className={`dot ${currentIndex === index ? 'active' : ''}`}
+                onClick={() => goToSlide(index)}
+              ></span>
+            ))}
         </div>
       </div>
     </div>
