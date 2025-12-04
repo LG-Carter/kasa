@@ -14,10 +14,6 @@ function Slider({ imageSlider = [] }) {
     setCurrentIndex((prev) => (prev - 1 + imageSlider.length) % imageSlider.length);
   };
 
-  // Aller directement à une slide via les points
-  const goToSlide = (index) => {
-    setCurrentIndex(index);
-  };
 
   // Gérer le cas où il n'y a pas d'images
   if (!imageSlider || imageSlider.length === 0) {
@@ -64,17 +60,7 @@ function Slider({ imageSlider = [] }) {
           {/* Indicateur 1/4, 2/4 etc. */}
           <span className="slide-counter">
             {currentIndex + 1} / {imageSlider.length}
-          </span>
-
-          {/* Points de navigation - visibles seulement si plus d'une image */}
-          {showNavigation &&
-            imageSlider.map((_, index) => (
-              <span
-                key={index}
-                className={`dot ${currentIndex === index ? 'active' : ''}`}
-                onClick={() => goToSlide(index)}
-              ></span>
-            ))}
+          </span>          
         </div>
       </div>
     </div>
